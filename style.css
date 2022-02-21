@@ -8,7 +8,9 @@
   --accent: #FCA311;
   --sidebarHighlight: #233A6C;
 }
-/* https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff */
+/* https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff 
+
+https://boringavatars.com/*/
 
 /* GENERAL */
 
@@ -19,6 +21,7 @@
 }
 
 body {
+  background: var(--background);
   display: inline-grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -116,11 +119,36 @@ body {
   display: grid;
   grid-template-columns: 80% 20%;
   grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  padding: 0 10px 5px;
 }
 
-.left,
-.right {
-  background: var(--header);
+#search {
+  padding-left: 20px;
+}
+#search input {
+  background: var(--background);
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  margin-left: 10px;
+  outline: none;
+  width: 90%;
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+#welcome {
+  display: flex;
+  align-items: center;
 }
 
 /* MAIN */
