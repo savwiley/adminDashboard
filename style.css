@@ -7,6 +7,9 @@
   --sidebar: #EA526F;
   --accent: #FF8A5B;
 }
+/* https://coolors.co/palette/25ced1-ffffff-fceade-ff8a5b-ea526f */
+
+/* GENERAL */
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -24,11 +27,15 @@ body {
   overflow: hidden;
 }
 
+/* SIDEBAR */
+
 #sidebar {
   background: var(--sidebar);
   grid-area: 1 / 1 / 6 / 2;
   z-index: 2;
 }
+
+/* HEADER */
 
 #header {
   background: var(--header);
@@ -36,6 +43,8 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   z-index: 1;
 }
+
+/* MAIN */
 
 #main {
   grid-area: 2 / 2 / 6 / 6;
@@ -45,16 +54,26 @@ body {
   gap: 15px;
   padding: 20px 20px 0 10px;
   overflow-y: scroll;
-}
-
-#projects,
-#announce,
-#trends {
-  background: var(--projects);
+  margin-bottom: 20px;
 }
 
 #projects {
   grid-area: 1 / 1 / 5 / 2;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10px repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project,
+.aside {
+  background: var(--projects);
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px rgba(0,0,0,0.4);
+}
+
+.project {
+  border-left: 10px solid var(--accent);
 }
 
 #announce {
@@ -63,4 +82,17 @@ body {
 
 #trends {
   grid-area: 3 / 2 / 5 / 3;
+}
+
+#announce,
+#trends {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10px 1fr;
+  gap: 20px;
+}
+
+.text {
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: 1.1rem;
 }
