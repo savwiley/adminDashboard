@@ -14,7 +14,6 @@
 
 * {
   font-family: 'Roboto', sans-serif;
-  background: var(--background);
   margin: 0;
   padding: 0;
 }
@@ -52,7 +51,6 @@ body {
 }
 
 .item {
-  background: transparent;
   background-size: 0% 5px;
   background-position: 0%;
   color: var(--header);
@@ -69,7 +67,6 @@ body {
   background-repeat: no-repeat;
 }
 .item i {
-  background: transparent;
   font-size: 1.2rem;
   padding-right: 10px;
 }
@@ -116,6 +113,14 @@ body {
   grid-area: 1 / 2 / 2 / 6;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   z-index: 1;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.left,
+.right {
+  background: var(--header);
 }
 
 /* MAIN */
