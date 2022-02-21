@@ -120,7 +120,7 @@ body {
   grid-template-columns: 70% 30%;
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
-  padding: 0 10px 5px;
+  padding: 0 10px 10px;
 }
 
 #search {
@@ -148,6 +148,18 @@ body {
 #welcome {
   display: flex;
   align-items: center;
+}
+#hello {
+  padding-left: 10px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+#hello span:first-child {
+  font-size: 0.8em;
+}
+#hello span:last-child {
+  font-size: 1.5em;
 }
 
 #buttons button {
