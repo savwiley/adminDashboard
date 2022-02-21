@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --background: #FCEADE;
+  --background: #E5E5E5;
   --header: #FFFFFF;
   --projects: #FFFFFF;
-  --sidebar: #EA526F;
-  --accent: #FF8A5B;
+  --sidebar: #14213D;
+  --accent: #FCA311;
 }
-/* https://coolors.co/palette/25ced1-ffffff-fceade-ff8a5b-ea526f */
+/* https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff */
 
 /* GENERAL */
 
