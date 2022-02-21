@@ -6,6 +6,7 @@
   --projects: #FFFFFF;
   --sidebar: #14213D;
   --accent: #FCA311;
+  --sidebarHighlight: #233A6C;
 }
 /* https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff */
 
@@ -21,7 +22,7 @@
 body {
   display: inline-grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -51,18 +52,34 @@ body {
 }
 
 .item {
-  background: var(--sidebar);
+  background: transparent;
+  background-size: 0% 5px;
+  background-position: 0%;
   color: var(--header);
   font-size: 1.4rem;
   padding-left: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+.item:hover {
+  background: linear-gradient(90deg, var(--sidebarHighlight), transparent);
+  background-size: 100% 5px;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
 }
 .item i {
-  background: var(--sidebar);
+  background: transparent;
+  font-size: 1.2rem;
+  padding-right: 10px;
 }
 
 #brand {
   grid-area: brand;
   font-size: 1.6rem;
+}
+#brand i {
+  font-size: 2rem;
 }
 #home {
   grid-area: home;
@@ -111,7 +128,6 @@ body {
   gap: 15px;
   padding: 20px 20px 0 10px;
   overflow-y: scroll;
-  margin-bottom: 20px;
 }
 
 #projects {
@@ -120,6 +136,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 10px repeat(3, 1fr);
   gap: 20px;
+  padding-bottom: 20px;
 }
 
 .project,
@@ -139,6 +156,7 @@ body {
 
 #trends {
   grid-area: 3 / 2 / 5 / 3;
+  padding-bottom: 20px;
 }
 
 #announce,
