@@ -33,6 +33,63 @@ body {
   background: var(--sidebar);
   grid-area: 1 / 1 / 6 / 2;
   z-index: 2;
+  display: grid;
+  grid-template-areas:
+    "brand"
+    "brand"
+    "home"
+    "profile"
+    "messages"
+    "history"
+    "tasks"
+    "community"
+    "."
+    "settings"
+    "support"
+    "privacy";
+  align-items: center;
+}
+
+.item {
+  background: var(--sidebar);
+  color: var(--header);
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+.item i {
+  background: var(--sidebar);
+}
+
+#brand {
+  grid-area: brand;
+  font-size: 1.6rem;
+}
+#home {
+  grid-area: home;
+}
+#profile {
+  grid-area: profile;
+}
+#messages {
+  grid-area: messages;
+}
+#history {
+  grid-area: history;
+}
+#tasks {
+  grid-area: tasks;
+}
+#community {
+  grid-area: community;
+}
+#settings {
+  grid-area: settings;
+}
+#support {
+  grid-area: support;
+}
+#privacy {
+  grid-area: privacy;
 }
 
 /* HEADER */
